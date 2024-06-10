@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanilla JS</title>
+    <title>React JSX with Green Button</title>
+
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        .wrapper {
+            text-align:center;
+        }
+        .btn {
+            width:150px;
+            height:50px;
+            text-align:center;
+            background: green;
+            color:#fff;
+            font-size:16px;
+            border:0;
+            border-radius:5px;
+            transition: all 0.2s;
+            cursor:pointer;
+        }
+        .btn:hover {
+            background: #00AF00;
+        }
+        .btn.active {
+            background-color: #800080;
+        }
+        .btn.active:hover {
+            background: #AB00AB;
+        }
+    </style>
 </head>
 <body>
     <div id="app"></div>
-    <div id="vanilla-app"></div>
-    <script type="text/babel">
-        const helloWorld = React.createElement('h1', null, 'Hello from react')
-        const paragraph = React.createElement('p', null, 'Welcome inside project')
-        const contMain = React.createElement('div', null, helloWorld, paragraph)
-
-        const container = document.getElementById('app')
-        const root = ReactDOM.createRoot(container)
-        root.render(<h1>Welcome with Babel</h1>)
-    </script>
-    <script>
-        const headBlock = document.createElement("h1")
-        headBlock.innerText = "Hello from react with VanillaJS"
-        document.getElementById('vanilla-app').appendChild(headBlock)
-    </script>
+    <script src="/js/script_new.js" type="text/babel"></script>
 </body>
 </html>
