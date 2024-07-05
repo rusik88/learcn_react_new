@@ -1,13 +1,11 @@
 import './App.css';
-import MyComponent from "./components/MyComponent";
-import OtherComponent from "./components/OtherComponent";
+import PetInfoComponent from "./components/PetInfoComponent";
 
 function App() {
   return (
     <div className="App">
-      <MyComponent />
-      <OtherComponent />
-      <MyComponent />
+      <PetInfoComponent animal="dog" year="3" />
+      <PetInfoComponent animal="cat" year="7" />
     </div>
   );
 }
