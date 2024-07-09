@@ -1,11 +1,10 @@
 import './App.css';
-import PetInfoComponent from "./components/PetInfoComponent";
+import RandomNumber from "./components/RandomNumber";
 
 function App() {
   return (
     <div className="App">
-      <PetInfoComponent animal="dog" year={3} hasPet={false} />
-      <PetInfoComponent animal="cat" year={7} hasPet={true} />
+      <RandomNumber maxNum={1000} />
     </div>
   );
 }
