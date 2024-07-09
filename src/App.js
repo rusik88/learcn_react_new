@@ -5,6 +5,7 @@ import {useState} from "react";
 
 function App() {
   const [counterState, setCounterState] = useState(0)
+  const texts = ['Click me 1', 'Click me 2', 'Click me 3', 'Click me 4', 'Click me 5']
 
   const handleSetCounter = () => {
         setCounterState(counterState + 1)
@@ -13,10 +14,9 @@ function App() {
   return (
     <div className="App">
       <Counter counter={counterState} />
-      <Button handleSetCounter = {handleSetCounter}/>
-      <Button handleSetCounter = {handleSetCounter}/>
-      <Button handleSetCounter = {handleSetCounter}/>
-      <Button handleSetCounter = {handleSetCounter}/>
+        {texts.map((item, index) => {
+            return <Button key={index} handleSetCounter = {handleSetCounter} text={item}/>
+        })}
     </div>
   );
 }

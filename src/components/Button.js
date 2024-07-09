@@ -1,8 +1,6 @@
-function Button(props) {
-    const {handleSetCounter} = props
-
+function Button({handleSetCounter, text}) {
     return (
-        <button onClick={handleSetCounter}>Click me!</button>
+        <button onClick={handleSetCounter}>{text}</button>
     )
 }
 
