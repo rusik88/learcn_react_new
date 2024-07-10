@@ -2,41 +2,22 @@
   text-align: center;
 }
 
-.personsBlock {
-  display:flex;
-  flex-wrap: wrap;
-}
-
-.person {
-  width:25%;
-  justify-content: center;
+h1 {
+  color:#fff;
+  font-size:50px;
   margin:20px 0;
-  box-sizing: border-box;
-  display:flex;
-  padding: 0 15px;
 }
 
-.person .card {
-  width:100%;
-  border:1px solid gray;
+button {
   border-radius:5px;
-  box-sizing:border-box;
-  overflow:hidden;
-  padding-bottom:15px;
+  font-size:30px;
+  padding:15px;
+  border:0;
+  cursor:pointer;
+  margin:0 20px;
 }
 
-.card img {
-  border-radius:5px;
-  width:100%;
+.resetButton {
+  margin-top:20px;
 }
-
-.card h3 {
-  margin:7px 0 4px 0;
-  padding:0 5px;
-}
-
-.card h4 {
-  padding:0 5px;
-}
-
 
