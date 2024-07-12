@@ -7,7 +7,8 @@
 h1 {
   color:#fff;
   font-size:50px;
-  margin:20px 0;
+  margin:30px 0 0 0;
+  display:block;
 }
 
 form {
@@ -22,6 +23,7 @@ form input {
   margin: 0px;
   height: 33px;
   box-sizing: border-box;
+  width:100%;
 }
 
 form label {
