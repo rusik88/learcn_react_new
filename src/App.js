@@ -1,14 +1,37 @@
 import './App.css';
-import Wrapper from "./components/Wrapper";
+import {useEffect, useState} from "react";
 
 
 function App() {
+    const [todo, setTodo] = useState(null)
+    const [status, setStatus] = useState(false)
+
+    useEffect(() => {
+        if(status !== false) {
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                .then((res) => res.json())
+                .then((data) => {
+                    setTodo(data)
+                })
+        }
+    }, [status])
+
+    setTimeout(() => {
+        if(status === false) {
+            setStatus(true)
+        }
+    }, 2000)
+
+    if(todo !== null) {
+        console.log(todo)
+    }
+
+
     return (
         <div className="App">
-            <Wrapper color="yellow">
-                <h2>Text from children props</h2>
-                <p>Text from children props 222</p>
-            </Wrapper>
+            {todo !== null &&
+                (<h1>{todo.title}</h1>)
+            }
         </div>
     );
 }
