@@ -1,4 +1,5 @@
 import Post from "./Post";
+import './Post.css'
 import {useEffect, useState} from "react";
 
 function Posts() {
@@ -7,27 +8,18 @@ function Posts() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        /*const fetchData = async () => {
+        const fetchData = async () => {
             try {
                 const postsData =  await fetch('https://jsonplaceholder.typicode.com/posts')
                 const data = await postsData.json()
                 setPosts(data)
             } catch(e) {
-                console.log(e.message)
-            }
-        }
-        fetchData()*/
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then((res) => res.json())
-            .then((data) => {
-                setPosts(data)
-            })
-            .catch((e) => {
                 setError(e.message)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
+            }
+
+             setLoading(false)
+        }
+        fetchData()
     }, [])
 
     if(error) {

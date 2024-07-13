@@ -2,31 +2,3 @@
   text-align: center;
 }
 
-.postsHeadBlock {
-  width:100%;
-  display:block;
-  flex:none;
-  margin-bottom:30px;
-}
-
-.postsHeadBlock h1 {
-  margin-bottom:10px;
-}
-
-.postsBlock {
-  display:flex;
-  justify-content: space-between;
-  width:100%;
-  flex-wrap: wrap;
-}
-
-.post {
-  width:300px;
-  border:1px solid gray;
-  border-radius:5px;
-  padding:10px;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin:20px;
-}
