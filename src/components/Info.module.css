@@ -1,0 +1,11 @@
+.info {
+    max-width:40%;
+    border:2px solid gray;
+    margin:20px auto;
+    padding:20px;
+    border-radius:10px;
+}
+
+.info h1 {
+    color:green;
+}
