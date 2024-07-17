@@ -1,14 +1,10 @@
 import './App.css'
-import Info from "./components/Info";
+import TodoMain from "./components/TodoMain";
 
 function App() {
     return (
         <div className="App">
-            <Info />
-            <div className="info">
-                <h1>Hello from Info component</h1>
-                <button>Click me!!!</button>
-            </div>
+            <TodoMain />
         </div>
     );
 }
