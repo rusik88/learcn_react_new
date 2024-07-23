@@ -1,0 +1,11 @@
+.courses h3 {
+    margin:15px 0;
+}
+
+.courses h3 a {
+    color:#ADD8E6;
+}
+
+.courses h3 a:hover {
+    text-decoration:none;
+}
