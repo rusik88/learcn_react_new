@@ -2,22 +2,26 @@
   text-align: center;
 }
 
-.btn {
-  border:0;
-  border-radius: 5px;
-  cursor:pointer;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+* {
+  color:#fff;
 }
 
-.btn:hover svg {
-  color: #255285;
+nav {
+  padding:20px 0;
+  margin-bottom:10px;
+  background:lightblue;
 }
 
-.btn svg {
-  font-size:22px;
-  color:gray;
-  display:block;
-  transition:all 0.2s;
+nav > a {
+  margin:0 10px;
+  color:darkslategray;
+}
+
+nav > a:hover {
+  text-decoration:none;
+}
+
+.active {
+  text-decoration:none;
+  color:lightyellow;
 }
