@@ -1,13 +1,10 @@
 import UserContext from "../contexts/UserContext";
+import {useContext} from "react";
 
 function UserInfo() {
+    const name = useContext(UserContext)
     return (
-        <UserContext.Consumer>
-            { (value) => {
-                return (
-                <h1>{value}</h1>
-            )}}
-        </UserContext.Consumer>
+        <h1>{name}</h1>
     )
 }
 
