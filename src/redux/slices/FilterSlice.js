@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
+import {fetchBook} from "./requests";
 
 const initialState = {
     title: '',
@@ -20,8 +21,22 @@ const filterSlice = createSlice({
             state.favourite = action.payload
         },
         resetFilter: (state, action) => {
+            const prom = new Promise((reject, resolve) => {
+                setTimeout(() => {
+                    console.log("Test test test")
+                    reject()
+                }, 2000)
+            })
+
+            prom.then(() => console.log(555))
+
             return initialState
         }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchBook.fulfilled, (state, action) => {
+            console.log(action.payload)
+        })
     }
 })
 

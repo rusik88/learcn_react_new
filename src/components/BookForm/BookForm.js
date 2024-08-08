@@ -2,6 +2,7 @@ import "./BookForm.css"
 import {useState} from "react";
 import { useDispatch } from 'react-redux'
 import { addBook, randomBook } from "../../redux/books/actionCreators";
+import {fetchBook, resetLoader} from "../../redux/slices/requests";
 
 function BookForm() {
     const [title, setTitle] = useState('')
@@ -23,6 +24,11 @@ function BookForm() {
         dispatch(randomBook())
     }
 
+    const handleApi = async () => {
+        await dispatch(fetchBook())
+        dispatch(resetLoader())
+    }
+
     return (
         <div className="app-block filter">
             <h2>Book Filter</h2>
@@ -37,6 +43,7 @@ function BookForm() {
                 </div>
                 <button type="submit">Add Book</button>
                 <button onClick={HandleRandomBook}>Random Book</button>
+                <button onClick={handleApi}>Api data</button>
             </form>
         </div>
     )

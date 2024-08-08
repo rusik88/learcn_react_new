@@ -6,7 +6,6 @@ export const getRandomInt = (min, max) => {
 
 export const replaceTextMark = (text, search) => {
     let resText = text
-    //const matchText = text.match(search)
     if(search) {
         const regex = new RegExp(search, 'gi')
         const matchText = text.match(regex)
